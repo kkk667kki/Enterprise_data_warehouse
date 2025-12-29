@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- Hive元数据存储配置 -->
+    <property>
+        <name>javax.jdo.option.ConnectionURL</name>
+        <value>jdbc:mysql://localhost:3306/hive_metastore?createDatabaseIfNotExist=true&amp;useSSL=false</value>
+        <description>MySQL连接URL</description>
+    </property>
+    
+    <property>
+        <name>javax.jdo.option.ConnectionDriverName</name>
+        <value>com.mysql.cj.jdbc.Driver</value>
+        <description>MySQL驱动</description>
+    </property>
+    
+    <property>
+        <name>javax.jdo.option.ConnectionUserName</name>
+        <value>hive</value>
+        <description>数据库用户名</description>
+    </property>
+    
+    <property>
+        <name>javax.jdo.option.ConnectionPassword</name>
+        <value>hive123</value>
+        <description>数据库密码</description>
+    </property>
+    
+    <!-- Hive执行引擎配置 -->
+    <property>
+        <name>hive.execution.engine</name>
+        <value>spark</value>
+        <description>使用Spark作为执行引擎</description>
+    </property>
+    
+    <property>
+        <name>hive.metastore.warehouse.dir</name>
+        <value>/user/hive/warehouse</value>
+        <description>Hive数据仓库目录</description>
+    </property>
+    
+    <!-- 动态分区配置 -->
+    <property>
+        <name>hive.exec.dynamic.partition</name>
+        <value>true</value>
+        <description>启用动态分区</description>
+    </property>
+    
+    <property>
+        <name>hive.exec.dynamic.partition.mode</name>
+        <value>nonstrict</value>
+        <description>动态分区模式</description>
+    </property>
+</configuration>

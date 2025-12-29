@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- Hadoop核心配置 -->
+    <property>
+        <name>fs.defaultFS</name>
+        <value>hdfs://localhost:9000</value>
+        <description>HDFS默认文件系统</description>
+    </property>
+    
+    <property>
+        <name>hadoop.tmp.dir</name>
+        <value>/opt/hadoop/tmp</value>
+        <description>Hadoop临时目录</description>
+    </property>
+    
+    <!-- HDFS配置 -->
+    <property>
+        <name>dfs.replication</name>
+        <value>3</value>
+        <description>数据副本数</description>
+    </property>
+    
+    <property>
+        <name>dfs.namenode.name.dir</name>
+        <value>/opt/hadoop/hdfs/namenode</value>
+        <description>NameNode数据目录</description>
+    </property>
+    
+    <property>
+        <name>dfs.datanode.data.dir</name>
+        <value>/opt/hadoop/hdfs/datanode</value>
+        <description>DataNode数据目录</description>
+    </property>
+    
+    <!-- MapReduce配置 -->
+    <property>
+        <name>mapreduce.framework.name</name>
+        <value>yarn</value>
+        <description>MapReduce框架</description>
+    </property>
+    
+    <!-- YARN配置 -->
+    <property>
+        <name>yarn.resourcemanager.hostname</name>
+        <value>localhost</value>
+        <description>ResourceManager主机名</description>
+    </property>
+</configuration>
